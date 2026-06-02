@@ -15,6 +15,15 @@
     />
   </head>
   <body>
+      <Script src="https://watchtower-backend-1066098690977.us-central1.run.app/sdk.js" strategy="afterInteractive" />
+        <Script id="watchtower-init" strategy="afterInteractive">{`
+          window.addEventListener('load', function () {
+            if (window.WatchTower) window.WatchTower.init({
+              apiKey: "fs_1c500647bf",
+              endpoint: "https://watchtower-backend-1066098690977.us-central1.run.app/api/collect"
+            });
+          });
+        `}</Script>
     <h1>Vercel HTML Starter</h1>
     <p>
       This template is a simple, but powerful single
